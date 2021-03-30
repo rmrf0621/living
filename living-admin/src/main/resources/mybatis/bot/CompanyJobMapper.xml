@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fc.bot.mapper.CompanyJobMapper">
+    
+    <insert id="insert" parameterType="com.fc.bot.task.dto.CompanyJobDto">
+            insert into company_job(
+                company,
+                welfare,
+                position,
+                content,
+                create_time,
+                create_user,
+                update_time,
+                state)
+            values(
+                #{company},
+                #{welfare},
+                #{position},
+                #{content},
+                #{createTime},
+                #{createUser},
+                #{updateTime},
+                #{state}
+            )
+    </insert>
+                                                      
+</mapper>
