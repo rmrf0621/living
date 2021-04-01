@@ -6,14 +6,13 @@
         <groupId>com.tv.living</groupId>
         <artifactId>living</artifactId>
         <version>0.0.1-SNAPSHOT</version>
-        <relativePath/>
     </parent>
 
     <groupId>com.tv.living</groupId>
     <artifactId>living-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>living-admin</name>
 	<packaging>jar</packaging>
+    <name>living-admin</name>
     <description>living-admin</description>
 
 
@@ -203,76 +202,28 @@
 			<version>1.11.543</version>
 		</dependency>
 
-		<!-- tg bot接口API -->
-		<dependency>
-			<groupId>org.telegram</groupId>
-			<artifactId>telegrambots-spring-boot-starter</artifactId>
-			<version>5.0.1</version>
-		</dependency>
-
-<!--		<dependency>-->
-<!--			<groupId>com.github.pengrad</groupId>-->
-<!--			<artifactId>java-telegram-bot-api</artifactId>-->
-<!--			<version>5.0.1</version>-->
-<!--		</dependency>-->
-
-		<!-- tg接口API -->
-		<dependency>
-			<groupId>org.telegram</groupId>
-			<artifactId>telegramapi</artifactId>
-			<version>66.2</version>
-		</dependency>
-
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.16</version>
 		</dependency>
 
-		<!-- 脚本执行框架 -->
 		<dependency>
-			<groupId>org.zeroturnaround</groupId>
-			<artifactId>zt-exec</artifactId>
-			<version>1.12</version>
+			<groupId>com.tv.living</groupId>
+			<artifactId>living-module</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.tv.living</groupId>
+			<artifactId>living-utils</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 
 	</dependencies>
 
-    <build>
-		<!-- 打包不带版本号 -->
-		<!-- <finalName>springboot_v2</finalName> -->
+	<build>
 		<plugins>
-			<!-- JUnit 配置 -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-	 			<artifactId>maven-surefire-plugin</artifactId>
-	 			<!--忽略测试启动类 -->
-				<configuration>
-					<skip>true</skip>
-				</configuration>
-			</plugin>
-			<!-- generator 配置-->
-			<plugin>
-				<groupId>org.mybatis.generator</groupId>
-				<artifactId>mybatis-generator-maven-plugin</artifactId>
-				<version>1.3.7</version>
-				<configuration>
-					<!--允许移动生成的文件 -->
-					<verbose>false</verbose>
-					<!--允许覆盖生成的文件 -->
-					<overwrite>false</overwrite>
-					<!--配置文件的路径 -->
-					<configurationFile>src/main/resources/mybatis-generator.xml</configurationFile>
-				</configuration>
-				<dependencies>
-					<dependency>
-						<groupId>mysql</groupId>
-						<artifactId>mysql-connector-java</artifactId>
-						<version>${mysql.version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-			<!-- jar运行配置 -->
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>

@@ -2,8 +2,7 @@
 #mysql7.0
 spring:
   datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.jdbc.Driver
+    driverClassName: com.mysql.mj.jdbc.Driver
     #druid连接池配置
     druid:
      #主库数据源

@@ -2,6 +2,9 @@ package com.tv.living.service;
 
 import com.tv.living.entity.LivingSportsMatch;
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.tv.living.vo.match.MatchVo;
+
+import java.util.List;
 
 /**
  * <p>
@@ -13,4 +16,10 @@ import com.baomidou.mybatisplus.extension.service.IService;
  */
 public interface ILivingSportsMatchService extends IService<LivingSportsMatch> {
 
+    /**
+     * 列表
+     * @param matchVo
+     * @return
+     */
+    public List<LivingSportsMatch> queryMatchList(MatchVo matchVo);
 }

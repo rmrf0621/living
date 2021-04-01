@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class, scanBasePackages = {"com.fc.v2", "com.fc.bot"})
-public class V2Application {
+public class AdminApplication {
 
 
     @Bean
@@ -16,7 +16,7 @@ public class V2Application {
     }
 
     public static void main(String[] args) {
-        SpringApplication.run(V2Application.class, args);
+        SpringApplication.run(AdminApplication.class, args);
     }
 
 }

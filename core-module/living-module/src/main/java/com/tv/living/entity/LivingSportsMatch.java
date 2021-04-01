@@ -26,6 +26,8 @@ public class LivingSportsMatch implements Serializable {
 
     private String homeCode;
 
+    private String homeIcon;
+
     /**
      * 客队
      */
@@ -33,15 +35,22 @@ public class LivingSportsMatch implements Serializable {
 
     private String awayCode;
 
+    private String awayIcon;
+
     /**
      * 比赛时间
      */
     private LocalDateTime competingTime;
 
     /**
-     * 赛事类别
+     * 赛事类别,电竞,足球,篮球
      */
     private String category;
+
+    /**
+     * 二级分类,电竞(lol,csgo),足球(西甲,英甲)
+     */
+    private String category2;
 
     /**
      * 直播地址
