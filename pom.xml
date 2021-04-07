@@ -19,6 +19,7 @@
 		<module>api-module</module>
 		<module>core-module</module>
 		<module>living-utils</module>
+		<module>abcd</module>
 	</modules>
 
 	<properties>

@@ -2,8 +2,13 @@ package com.tv.living.entity;
 
 import java.time.LocalDateTime;
 import java.io.Serializable;
+
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
+import org.springframework.data.annotation.Id;
 
 /**
  * <p>
@@ -14,10 +19,14 @@ import lombok.EqualsAndHashCode;
  * @since 2021-03-22
  */
 @Data
+@TableName("living_sports_match")
 @EqualsAndHashCode(callSuper = false)
 public class LivingSportsMatch implements Serializable {
 
     private static final long serialVersionUID = 1L;
+
+    @TableId(type = IdType.AUTO)
+    private Integer id;
 
     /**
      * 主队
@@ -28,6 +37,9 @@ public class LivingSportsMatch implements Serializable {
 
     private String homeIcon;
 
+    private String homeScore;
+
+
     /**
      * 客队
      */
@@ -37,10 +49,16 @@ public class LivingSportsMatch implements Serializable {
 
     private String awayIcon;
 
+    private String awayScore;
+
     /**
      * 比赛时间
      */
     private LocalDateTime competingTime;
+
+    private String startDate ;
+
+    private String startTime;
 
     /**
      * 赛事类别,电竞,足球,篮球
@@ -58,9 +76,9 @@ public class LivingSportsMatch implements Serializable {
     private String streamUrl;
 
     /**
-     * 装填
+     * 状态
      */
-    private Integer sate;
+    private Integer state;
 
 
 }
